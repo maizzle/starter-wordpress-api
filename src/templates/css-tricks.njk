@@ -1,0 +1,162 @@
+---
+bodyClass: bg-gray-200
+title: "Latest posts on CSS-Tricks"
+preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
+---
+
+{% extends "src/layouts/default.njk" %}
+{% set allPosts = page.posts.all %}
+{% set featured_post_image = allPosts[0]._embedded["wp:featuredmedia"][0]["source_url"] or 'https://via.placeholder.com/600x400' %}
+
+{% block template %}
+
+<table class="w-full font-sans">
+  <tr>
+    <td align="center" class="bg-gray-200 sm:px-16">
+      <table class="w-600 sm:w-full">
+        <tr>
+          <td class="p-48 sm:py-32 sm:px-24 text-center">
+            <a href="https://maizzle.com">
+              <img src="https://css-tricks.com/apple-touch-icon.png" width="100" alt="CSS-Tricks">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="bg-top bg-no-repeat bg-cover rounded text-left" style="background-image: url('{{ featured_post_image }}');">
+            {% component "src/components/vmlbg.njk", {width: 600, height: 400, src: featured_post_image} %}
+              <div class="leading-32">&zwnj;</div>
+              <table class="w-full">
+                <tr>
+                  <td class="w-48 sm:w-16"></td>
+                  <td>
+                    <h1 class="m-0 mb-16 text-4xl text-white sm:leading-40">{{ allPosts[0].title.rendered }}</h1>
+                    <div class="m-0 text-white text-lg leading-24">{{ allPosts[0].excerpt.rendered | truncate(160) }}</div>
+                    <div class="leading-32">&zwnj;</div>
+                    <table>
+                      <tr>
+                        <th class="bg-indigo-800 hover:bg-indigo-700 rounded" style="mso-padding-alt: 16px 24px;">
+                          <a href="{{ allPosts[0].link }}" class="block font-semibold text-white text-base leading-full py-16 px-24 no-underline">Read more &rarr;</a>
+                        </th>
+                      </tr>
+                    </table>
+                  </td>
+                  <td class="w-48 sm:w-16"></td>
+                </tr>
+              </table>
+              <div class="leading-32">&zwnj;</div>
+            {% endcomponent %}
+          </td>
+        </tr>
+        <tr>
+          <td class="h-32"></td>
+        </tr>
+        <tr>
+          <td class="w-full px-24 sm:px-0 text-left">
+            <table class="w-full">
+              <tr>
+                <td class="w-full pb-32 sm:w-full sm:inline-block">
+                  <table class="w-full">
+                    <tr>
+                      <td class="p-24 bg-white rounded">
+                        <p class="m-0 mb-4 text-sm text-gray-500">{{ page.formattedDate(allPosts[1].date) }}</p>
+                        <h2 class="m-0 mb-24 text-2xl leading-24">
+                          <a href="{{ allPosts[1].link }}" class="text-black hover:text-gray-700 no-underline">{{ allPosts[1].title.rendered }}</a>
+                        </h2>
+                        <div class="m-0 mb-24 text-base text-gray-800">{{ allPosts[1].excerpt.rendered | truncate(160, false, " [&hellip;]") }}</div>
+                        <a href="{{ allPosts[1].link }}" class="text-base text-blue-500 hover:text-blue-400 no-underline">Read more &rarr;</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="w-full px-24 sm:px-0 text-left">
+            <table class="w-full">
+              <tr>
+                <td class="w-1/2 pr-16 sm:px-0 sm:pb-32 sm:w-full sm:inline-block">
+                  <table class="w-full">
+                    <tr>
+                      <td class="p-24 bg-white rounded">
+                        <p class="m-0 mb-4 text-sm text-gray-500">{{ page.formattedDate(allPosts[2].date) }}</p>
+                        <h2 class="m-0 mb-24 text-2xl leading-24">
+                          <a href="{{ allPosts[2].link }}" class="text-black hover:text-gray-700 no-underline">{{ allPosts[2].title.rendered }}</a>
+                        </h2>
+                        <div class="m-0 mb-24 text-base text-gray-800">{{ allPosts[2].excerpt.rendered | truncate(80, false, " [&hellip;]") }}</div>
+                        <a href="{{ allPosts[2].link }}" class="text-base text-blue-500 hover:text-blue-400 no-underline">Read more &rarr;</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="w-1/2 pl-16 sm:px-0 sm:w-full sm:inline-block">
+                  <table class="w-full">
+                    <tr>
+                      <td class="p-24 bg-white rounded">
+                        <p class="m-0 mb-4 text-sm text-gray-500">{{ page.formattedDate(allPosts[3].date) }}</p>
+                        <h2 class="m-0 mb-24 text-2xl leading-24">
+                          <a href="{{ allPosts[3].link }}" class="text-black hover:text-gray-700 no-underline">{{ allPosts[3].title.rendered }}</a>
+                        </h2>
+                        <div class="m-0 mb-24 text-base text-gray-800">{{ allPosts[3].excerpt.rendered | truncate(80, false, " [&hellip;]") }}</div>
+                        <a href="{{ allPosts[3].link }}" class="text-base text-blue-500 hover:text-blue-400 no-underline">Read more &rarr;</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="h-64 sm:h-32"></td>
+        </tr>
+        <tr>
+          <td class="px-48 sm:px-24 text-left">
+            <h3 class="m-0 text-base font-semibold text-gray-500 uppercase">From the archives</h3>
+            <div class="leading-24">&zwnj;</div>
+            <table class="w-full">
+              {% for post in page.posts.lasttwo %}
+              <tr>
+                <td>
+                  <p class="text-xs text-gray-500 mb-2">{{ page.formattedDate(post.date) }}</p>
+                  <h4 class="m-0 mb-4 text-xl font-semibold">
+                    <a href="{{ post.link }}" class="text-blue-500 hover:text-blue-400 no-underline">{{ post.title.rendered }}</a>
+                  </h4>
+                  <div class="m-0 text-gray-500">{{ post.excerpt.rendered | truncate(60) }}</div>
+                  {% if loop.last === false %}
+                  <table class="w-full">
+                    <tr>
+                      <td class="py-24">
+                        <div class="bg-gray-300 h-px leading-px">&zwnj;</div>
+                      </td>
+                    </tr>
+                  </table>
+                  {% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="h-64 sm:h-32"></td>
+        </tr>
+        <tr>
+          <td class="px-48 sm:px-24 py-16 bg-gray-300 rounded text-left">
+            <p class="m-0 text-sm text-gray-600">
+              You are receiving this email because you signed up for Website Newsletter Weekly.
+              You can <a href="https://example.com" class="text-blue-500 hover:text-blue-400 no-underline">unsubscribe</a> at any time.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="h-48 sm:h-32"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+{% endblock %}
+
