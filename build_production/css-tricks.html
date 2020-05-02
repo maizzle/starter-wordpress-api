@@ -1,70 +1,139 @@
----
-bodyClass: bg-gray-200
-title: "Latest posts on CSS-Tricks"
-preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
-posts:
-  featured:
-    width: 600
-    height: 400
----
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
-<extends src="src/layouts/master.html">
-  <block name="template">
-    <scope with="page.posts">
-      <table class="w-full font-sans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <title>Latest posts on CSS-Tricks</title>
+    <style>
+      .hover-bg-indigo-700:hover {
+        background-color: #5145cd !important;
+      }
+
+      .hover-text-gray-700:hover {
+        color: #374151 !important;
+      }
+
+      .hover-text-blue-400:hover {
+        color: #76a9fa !important;
+      }
+
+      @media (max-width: 600px) {
+        .sm-inline-block {
+          display: inline-block !important;
+        }
+
+        .sm-h-32 {
+          height: 32px !important;
+        }
+
+        .sm-leading-40 {
+          line-height: 40px !important;
+        }
+
+        .sm-px-0 {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
+        .sm-px-16 {
+          padding-left: 16px !important;
+          padding-right: 16px !important;
+        }
+
+        .sm-px-24 {
+          padding-left: 24px !important;
+          padding-right: 24px !important;
+        }
+
+        .sm-py-32 {
+          padding-top: 32px !important;
+          padding-bottom: 32px !important;
+        }
+
+        .sm-pb-32 {
+          padding-bottom: 32px !important;
+        }
+
+        .sm-w-16 {
+          width: 16px !important;
+        }
+
+        .sm-w-full {
+          width: 100% !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body style="margin: 0; padding: 0; width: 100%; word-break: break-word; -webkit-font-smoothing: antialiased; background-color: #e5e7eb;">
+    <div style="display: none;">👀 Lorem, ipsum, and much dolor in this week&#039;s edition</div>
+    <div role="article" aria-roledescription="email" aria-label="Latest posts on CSS-Tricks" lang="en">
+
+      <table style="font-family: -apple-system, 'Segoe UI', sans-serif; width: 100%;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
         <tr>
-          <td align="center" class="bg-gray-200 sm:px-16">
-            <table class="w-600 sm:w-full">
+          <td align="center" class="sm-px-16" style="background-color: #e5e7eb;" bgcolor="#e5e7eb">
+            <table class="sm-w-full" style="width: 600px;" width="600" cellpadding="0" cellspacing="0" role="presentation">
               <tr>
-                <td class="p-48 sm:py-32 sm:px-24 text-center">
+                <td class="sm-py-32 sm-px-24" style="padding: 48px; text-align: center;" align="center">
                   <a href="https://maizzle.com">
-                    <img src="https://css-tricks.com/apple-touch-icon.png" width="100" alt="CSS-Tricks">
+                    <img src="https://css-tricks.com/apple-touch-icon.png" width="100" alt="CSS-Tricks" style="border: 0; max-width: 100%; line-height: 100%; vertical-align: middle;">
                   </a>
                 </td>
               </tr>
               <tr>
-                <td class="bg-top bg-no-repeat bg-cover rounded text-left" style="background-image: url('{{ featured.image }}');">
-                  <component src="src/components/vmlbg.html">
-                    <div class="leading-32">&zwnj;</div>
-                    <table class="w-full">
-                      <tr>
-                        <td class="w-48 sm:w-16"></td>
-                        <td>
-                          <h1 class="m-0 mb-16 text-4xl text-white sm:leading-40">{{ all[0].title.rendered }}</h1>
-                          <div class="m-0 text-white text-lg leading-24">{{{ page.truncate(all[0].excerpt.rendered, 30) }}}</div>
-                          <div class="leading-32">&zwnj;</div>
-                          <table>
-                            <tr>
-                              <th class="bg-indigo-800 hover:bg-indigo-700 rounded" style="mso-padding-alt: 16px 24px;">
-                                <a href="{{ all[0].link }}" class="block font-semibold text-white text-base leading-full py-16 px-24 no-underline">Read more &rarr;</a>
-                              </th>
-                            </tr>
-                          </table>
-                        </td>
-                        <td class="w-48 sm:w-16"></td>
-                      </tr>
-                    </table>
-                    <div class="leading-32">&zwnj;</div>
-                  </component>
+                <td style="background-image: url('https://css-tricks.com/wp-content/uploads/2020/04/netlify-incremental-builds.png'); background-position: top; background-repeat: no-repeat; background-size: cover; border-radius: 4px; text-align: left;" background="https://css-tricks.com/wp-content/uploads/2020/04/netlify-incremental-builds.png" align="left">
+                  <!--[if mso]>
+<v:image src="https://css-tricks.com/wp-content/uploads/2020/04/netlify-incremental-builds.png" xmlns:v="urn:schemas-microsoft-com:vml" style="width:600px;height:400px;" />
+<v:rect fill="false" stroke="false" style="position:absolute;width:600px;height:400px;">
+<v:textbox inset="0,0,0,0"><div><![endif]-->
+                  <div style="line-height: 32px;">&zwnj;</div>
+                  <table style="width: 100%;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tr>
+                      <td class="sm-w-16" style="width: 48px;" width="48"></td>
+                      <td>
+                        <h1 class="sm-leading-40" style="font-size: 36px; margin: 0 0 16px; color: #ffffff;">Enable Gatsby Incremental Builds on Netlify</h1>
+                        <div style="font-size: 18px; line-height: 24px; margin: 0; color: #ffffff;">
+                          <p>The concept of an &#8220;incremental build&#8221; is that, when using some kind of generator that builds all the files that make for a website, rather than rebuilding 100% of those [...]</p>
+                        </div>
+                        <div style="line-height: 32px;">&zwnj;</div>
+                        <table cellpadding="0" cellspacing="0" role="presentation">
+                          <tr>
+                            <th class="hover-bg-indigo-700" style="mso-padding-alt: 16px 24px; background-color: #42389d; border-radius: 4px;" bgcolor="#42389d">
+                              <a href="https://css-tricks.com/enable-gatsby-incremental-builds-on-netlify/" style="display: block; font-weight: 600; font-size: 16px; line-height: 100%; padding: 16px 24px; color: #ffffff; text-decoration: none;">Read more &rarr;</a>
+                            </th>
+                          </tr>
+                        </table>
+                      </td>
+                      <td class="sm-w-16" style="width: 48px;" width="48"></td>
+                    </tr>
+                  </table>
+                  <div style="line-height: 32px;">&zwnj;</div>
+                  <!--[if mso]></div></v:textbox></v:rect><![endif]-->
                 </td>
               </tr>
               <tr>
-                <td class="h-32"></td>
+                <td style="height: 32px;" height="32"></td>
               </tr>
               <tr>
-                <td class="w-full px-24 sm:px-0 text-left">
-                  <table class="w-full">
+                <td class="sm-px-0" style="padding-left: 24px; padding-right: 24px; text-align: left; width: 100%;" width="100%" align="left">
+                  <table style="width: 100%;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
                     <tr>
-                      <td class="w-full pb-32 sm:w-full sm:inline-block">
-                        <table class="w-full">
+                      <td class="sm-w-full sm-inline-block" style="padding-bottom: 32px; width: 100%;" width="100%">
+                        <table style="width: 100%;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
                           <tr>
-                            <td class="p-24 bg-white rounded">
-                              <p class="m-0 mb-4 text-sm text-gray-500">{{ page.formattedDate(all[1].date) }}</p>
-                              <h2 class="m-0 mb-24 text-2xl leading-24">
-                                <a href="{{ all[1].link }}" class="text-black hover:text-gray-700 no-underline">{{ (all[1].title.rendered) }}</a>
+                            <td style="background-color: #ffffff; border-radius: 4px; padding: 24px;" bgcolor="#ffffff">
+                              <p style="font-size: 14px; margin: 0 0 4px; color: #6b7280;">Apr 30, 2020</p>
+                              <h2 style="font-size: 24px; line-height: 24px; margin: 0 0 24px;">
+                                <a href="https://css-tricks.com/the-hero-generator/" class="hover-text-gray-700" style="color: #000000; text-decoration: none;">The Hero Generator</a>
                               </h2>
-                              <div class="m-0 mb-24 text-base text-gray-800">{{{ page.truncate(all[1].excerpt.rendered, 30, '') }}}</div>
-                              <a href="{{ all[1].link }}" class="text-base text-blue-500 hover:text-blue-400 no-underline">Read more &rarr;</a>
+                              <div style="font-size: 16px; margin: 0 0 24px; color: #252f3f;">
+                                <p>Sarah: I&#8217;ve had to implement the same hero for several years now, so like a good lazy programmer, I figured I&#8217;d automate it.</p>
+                              </div>
+                              <a href="https://css-tricks.com/the-hero-generator/" class="hover-text-blue-400" style="font-size: 16px; color: #3f83f8; text-decoration: none;">Read more &rarr;</a>
                             </td>
                           </tr>
                         </table>
@@ -74,33 +143,37 @@ posts:
                 </td>
               </tr>
               <tr>
-                <td class="w-full px-24 sm:px-0 text-left">
-                  <table class="w-full">
+                <td class="sm-px-0" style="padding-left: 24px; padding-right: 24px; text-align: left; width: 100%;" width="100%" align="left">
+                  <table style="width: 100%;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
                     <tr>
-                      <td class="w-1/2 pr-16 sm:px-0 sm:pb-32 sm:w-full sm:inline-block align-top">
-                        <table class="w-full">
+                      <td class="sm-px-0 sm-pb-32 sm-w-full sm-inline-block" style="padding-right: 16px; vertical-align: top; width: 50%;" width="50%" valign="top">
+                        <table style="width: 100%;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
                           <tr>
-                            <td class="p-24 bg-white rounded">
-                              <p class="m-0 mb-4 text-sm text-gray-500">{{ page.formattedDate(all[2].date) }}</p>
-                              <h2 class="m-0 mb-24 text-2xl leading-24">
-                                <a href="{{ all[2].link }}" class="text-black hover:text-gray-700 no-underline">{{ all[2].title.rendered }}</a>
+                            <td style="background-color: #ffffff; border-radius: 4px; padding: 24px;" bgcolor="#ffffff">
+                              <p style="font-size: 14px; margin: 0 0 4px; color: #6b7280;">Apr 30, 2020</p>
+                              <h2 style="font-size: 24px; line-height: 24px; margin: 0 0 24px;">
+                                <a href="https://css-tricks.com/css-tricks-chronicle-xxxviii/" class="hover-text-gray-700" style="color: #000000; text-decoration: none;">CSS-Tricks Chronicle XXXVIII</a>
                               </h2>
-                              <div class="m-0 mb-24 text-base text-gray-800">{{{ page.truncate(all[2].excerpt.rendered, 10) }}}</div>
-                              <a href="{{ all[2].link }}" class="text-base text-blue-500 hover:text-blue-400 no-underline">Read more &rarr;</a>
+                              <div style="font-size: 16px; margin: 0 0 24px; color: #252f3f;">
+                                <p>Hey hey, these &#8220;chronicle&#8221; posts are little roundups of news [...]</p>
+                              </div>
+                              <a href="https://css-tricks.com/css-tricks-chronicle-xxxviii/" class="hover-text-blue-400" style="font-size: 16px; color: #3f83f8; text-decoration: none;">Read more &rarr;</a>
                             </td>
                           </tr>
                         </table>
                       </td>
-                      <td class="w-1/2 pl-16 sm:px-0 sm:w-full sm:inline-block align-top">
-                        <table class="w-full">
+                      <td class="sm-px-0 sm-w-full sm-inline-block" style="padding-left: 16px; vertical-align: top; width: 50%;" width="50%" valign="top">
+                        <table style="width: 100%;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
                           <tr>
-                            <td class="p-24 bg-white rounded">
-                              <p class="m-0 mb-4 text-sm text-gray-500">{{ page.formattedDate(all[3].date) }}</p>
-                              <h2 class="m-0 mb-24 text-2xl leading-24">
-                                <a href="{{ all[3].link }}" class="text-black hover:text-gray-700 no-underline">{{ all[3].title.rendered }}</a>
+                            <td style="background-color: #ffffff; border-radius: 4px; padding: 24px;" bgcolor="#ffffff">
+                              <p style="font-size: 14px; margin: 0 0 4px; color: #6b7280;">Apr 30, 2020</p>
+                              <h2 style="font-size: 24px; line-height: 24px; margin: 0 0 24px;">
+                                <a href="https://css-tricks.com/some-innocent-fun-with-html-video-and-progress/" class="hover-text-gray-700" style="color: #000000; text-decoration: none;">Some Innocent Fun With HTML Video and Progress</a>
                               </h2>
-                              <div class="m-0 mb-24 text-base text-gray-800">{{{ page.truncate(all[3].excerpt.rendered, 10) }}}</div>
-                              <a href="{{ all[3].link }}" class="text-base text-blue-500 hover:text-blue-400 no-underline">Read more &rarr;</a>
+                              <div style="font-size: 16px; margin: 0 0 24px; color: #252f3f;">
+                                <p>The idea came while watching a mandatory training video on [...]</p>
+                              </div>
+                              <a href="https://css-tricks.com/some-innocent-fun-with-html-video-and-progress/" class="hover-text-blue-400" style="font-size: 16px; color: #3f83f8; text-decoration: none;">Read more &rarr;</a>
                             </td>
                           </tr>
                         </table>
@@ -110,54 +183,65 @@ posts:
                 </td>
               </tr>
               <tr>
-                <td class="h-64 sm:h-32"></td>
+                <td class="sm-h-32" style="height: 64px;" height="64"></td>
               </tr>
               <tr>
-                <td class="px-48 sm:px-24 text-left">
-                  <h3 class="m-0 text-base font-semibold text-gray-500 uppercase">From the archives</h3>
-                  <div class="leading-24">&zwnj;</div>
-                  <table class="w-full">
-                    <each loop="post in lasttwo">
-                      <tr>
-                        <td>
-                          <p class="text-xs text-gray-500 mb-2">{{ page.formattedDate(post.date) }}</p>
-                          <h4 class="m-0 mb-4 text-xl font-semibold">
-                            <a href="{{ post.link }}" class="text-blue-500 hover:text-blue-400 no-underline">{{ post.title.rendered }}</a>
-                          </h4>
-                          <div class="m-0 text-gray-500">{{{ page.truncate(post.excerpt.rendered, 20) }}}</div>
-                          <if condition="!loop.last">
-                            <table class="w-full">
-                              <tr>
-                                <td class="py-24">
-                                  <div class="bg-gray-300 h-px leading-px">&zwnj;</div>
-                                </td>
-                              </tr>
-                            </table>
-                          </if>
-                        </td>
-                      </tr>
-                    </each>
+                <td class="sm-px-24" style="padding-left: 48px; padding-right: 48px; text-align: left;" align="left">
+                  <h3 style="font-weight: 600; font-size: 16px; margin: 0; color: #6b7280; text-transform: uppercase;">From the archives</h3>
+                  <div style="line-height: 24px;">&zwnj;</div>
+                  <table style="width: 100%;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tr>
+                      <td>
+                        <p style="font-size: 12px; margin-bottom: 2px; color: #6b7280;">Apr 30, 2020</p>
+                        <h4 style="font-weight: 600; font-size: 20px; margin: 0 0 4px;">
+                          <a href="https://css-tricks.com/a-book-apart-turning-10/" class="hover-text-blue-400" style="color: #3f83f8; text-decoration: none;">A Book Apart Turning 10</a>
+                        </h4>
+                        <div style="margin: 0; color: #6b7280;">
+                          <p>Early congratulations, A Book Apart! That&#8217;s a hell of a milestone. I&#8217;m quite sure I&#8217;ve read more A Book Apart [...]</p>
+                        </div>
+                        <table style="width: 100%;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                          <tr>
+                            <td style="padding-top: 24px; padding-bottom: 24px;">
+                              <div style="background-color: #d2d6dc; height: 1px; line-height: 1px;">&zwnj;</div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p style="font-size: 12px; margin-bottom: 2px; color: #6b7280;">Apr 29, 2020</p>
+                        <h4 style="font-weight: 600; font-size: 20px; margin: 0 0 4px;">
+                          <a href="https://css-tricks.com/click-once-select-all-click-again-select-normally/" class="hover-text-blue-400" style="color: #3f83f8; text-decoration: none;">Click Once, Select All; Click Again, Select Normally</a>
+                        </h4>
+                        <div style="margin: 0; color: #6b7280;">
+                          <p>A bonafide CSS trick from Will Boyd! Force all the content of an element to be selected when clicked with [...]</p>
+                        </div>
+                      </td>
+                    </tr>
                   </table>
                 </td>
               </tr>
               <tr>
-                <td class="h-64 sm:h-32"></td>
+                <td class="sm-h-32" style="height: 64px;" height="64"></td>
               </tr>
               <tr>
-                <td class="px-48 sm:px-24 py-16 bg-gray-300 rounded text-left">
-                  <p class="m-0 text-sm text-gray-600">
+                <td class="sm-px-24" style="background-color: #d2d6dc; border-radius: 4px; padding: 16px 48px; text-align: left;" bgcolor="#d2d6dc" align="left">
+                  <p style="font-size: 14px; margin: 0; color: #4b5563;">
                     You are receiving this email because you signed up for Website Newsletter Weekly.
-                    You can <a href="https://example.com" class="text-blue-500 hover:text-blue-400 no-underline">unsubscribe</a> at any time.
+                    You can <a href="https://example.com" class="hover-text-blue-400" style="color: #3f83f8; text-decoration: none;">unsubscribe</a> at any time.
                   </p>
                 </td>
               </tr>
               <tr>
-                <td class="h-48 sm:h-32"></td>
+                <td class="sm-h-32" style="height: 48px;" height="48"></td>
               </tr>
             </table>
           </td>
         </tr>
       </table>
-    </scope>
-  </block>
-</extends>
+
+    </div>
+  </body>
+
+</html>
