@@ -24,28 +24,31 @@ posts:
               </tr>
               <tr>
                 <td class="bg-top bg-no-repeat bg-cover rounded text-left" style="background-image: url('{{ featured.image }}');">
-                  <component src="src/components/vmlbg.html">
-                    <div class="leading-32">&zwnj;</div>
-                    <table class="w-full">
-                      <tr>
-                        <td class="w-48 sm:w-16"></td>
-                        <td>
-                          <h1 class="m-0 mb-16 text-4xl text-white sm:leading-40">{{ all[0].title.rendered }}</h1>
-                          <div class="m-0 text-white text-lg leading-24">{{{ page.truncate(all[0].excerpt.rendered, 30) }}}</div>
-                          <div class="leading-32">&zwnj;</div>
-                          <table>
-                            <tr>
-                              <th class="bg-indigo-800 hover:bg-indigo-700 rounded" style="mso-padding-alt: 16px 24px;">
-                                <a href="{{ all[0].link }}" class="block font-semibold text-white text-base leading-full py-16 px-24 no-underline">Read more &rarr;</a>
-                              </th>
-                            </tr>
-                          </table>
-                        </td>
-                        <td class="w-48 sm:w-16"></td>
-                      </tr>
-                    </table>
-                    <div class="leading-32">&zwnj;</div>
-                  </component>
+                  <!--[if mso]>
+                  <v:image src="{{ featured.image || 'https://via.placeholder.com/600x400' }}" xmlns:v="urn:schemas-microsoft-com:vml" style="width:{{ featured.width || 600 }}px;height:{{ featured.height || 400 }}px;" />
+                  <v:rect fill="false" stroke="false" style="position:absolute;width:{{ featured.width || 600 }}px;height:{{ featured.height || 400 }}px;">
+                  <v:textbox inset="0,0,0,0"><div><![endif]-->
+                  <div class="leading-32">&zwnj;</div>
+                  <table class="w-full">
+                    <tr>
+                      <td class="w-48 sm:w-16"></td>
+                      <td>
+                        <h1 class="m-0 mb-16 text-4xl text-white sm:leading-40">{{ all[0].title.rendered }}</h1>
+                        <div class="m-0 text-white text-lg leading-24">{{{ page.truncate(all[0].excerpt.rendered, 30) }}}</div>
+                        <div class="leading-32">&zwnj;</div>
+                        <table>
+                          <tr>
+                            <th class="bg-indigo-800 hover:bg-indigo-700 rounded" style="mso-padding-alt: 16px 24px;">
+                              <a href="{{ all[0].link }}" class="block font-semibold text-white text-base leading-full py-16 px-24 no-underline">Read more &rarr;</a>
+                            </th>
+                          </tr>
+                        </table>
+                      </td>
+                      <td class="w-48 sm:w-16"></td>
+                    </tr>
+                  </table>
+                  <div class="leading-32">&zwnj;</div>
+                  <!--[if mso]></div></v:textbox></v:rect><![endif]-->
                 </td>
               </tr>
               <tr>
