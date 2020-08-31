@@ -64,7 +64,7 @@ posts:
                             <td class="p-24 bg-white rounded">
                               <p class="m-0 mb-4 text-sm text-gray-500">{{ page.formattedDate(all[1].date) }}</p>
                               <h2 class="m-0 mb-24 text-2xl leading-24">
-                                <a href="{{ all[1].link }}" class="text-black hover:text-gray-700 no-underline">{{ (all[1].title.rendered) }}</a>
+                                <a href="{{ all[1].link }}" class="text-black hover:text-gray-700 no-underline">{{{ (all[1].title.rendered) }}}</a>
                               </h2>
                               <div class="m-0 mb-24 text-base text-gray-800">{{{ page.truncate(all[1].excerpt.rendered, 30, '') }}}</div>
                               <a href="{{ all[1].link }}" class="text-base text-blue-500 hover:text-blue-400 no-underline">Read more &rarr;</a>
@@ -86,7 +86,7 @@ posts:
                             <td class="p-24 bg-white rounded">
                               <p class="m-0 mb-4 text-sm text-gray-500">{{ page.formattedDate(all[2].date) }}</p>
                               <h2 class="m-0 mb-24 text-2xl leading-24">
-                                <a href="{{ all[2].link }}" class="text-black hover:text-gray-700 no-underline">{{ all[2].title.rendered }}</a>
+                                <a href="{{ all[2].link }}" class="text-black hover:text-gray-700 no-underline">{{{ all[2].title.rendered }}}</a>
                               </h2>
                               <div class="m-0 mb-24 text-base text-gray-800">{{{ page.truncate(all[2].excerpt.rendered, 10) }}}</div>
                               <a href="{{ all[2].link }}" class="text-base text-blue-500 hover:text-blue-400 no-underline">Read more &rarr;</a>
@@ -100,7 +100,7 @@ posts:
                             <td class="p-24 bg-white rounded">
                               <p class="m-0 mb-4 text-sm text-gray-500">{{ page.formattedDate(all[3].date) }}</p>
                               <h2 class="m-0 mb-24 text-2xl leading-24">
-                                <a href="{{ all[3].link }}" class="text-black hover:text-gray-700 no-underline">{{ all[3].title.rendered }}</a>
+                                <a href="{{ all[3].link }}" class="text-black hover:text-gray-700 no-underline">{{{ all[3].title.rendered }}}</a>
                               </h2>
                               <div class="m-0 mb-24 text-base text-gray-800">{{{ page.truncate(all[3].excerpt.rendered, 10) }}}</div>
                               <a href="{{ all[3].link }}" class="text-base text-blue-500 hover:text-blue-400 no-underline">Read more &rarr;</a>
