@@ -14,11 +14,11 @@ const axios = require('axios').default
 module.exports = {
   build: {
     endpoint: 'https://css-tricks.com/wp-json/wp/v2/posts?page=1&per_page=7&offset=1&_embed=1',
-    destination: {
-      path: 'build_local',
-    },
     templates: {
-      root: 'src/templates',
+      source: 'src/templates',
+      destination: {
+        path: 'build_local',
+      },
     },
     tailwind: {
       css: 'src/assets/css/main.css',
