@@ -20,9 +20,6 @@ module.exports = {
         path: 'build_local',
       },
     },
-    tailwind: {
-      css: 'src/assets/css/main.css',
-    },
   },
   events: {
     async beforeCreate(config) {
