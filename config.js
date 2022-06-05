@@ -1,11 +1,11 @@
 /*
 |-------------------------------------------------------------------------------
-| Development config               https://maizzle.com/docs/environments/#local
+| Development config                      https://maizzle.com/docs/environments
 |-------------------------------------------------------------------------------
 |
-| The `config` object contains the default Maizzle settings for development.
-| This is used when you run the `maizzle build` or `maizzle serve`
-| and it's the fastest, as most transformations are disabled.
+| The exported object contains the default Maizzle settings for development.
+| This is used when you run `maizzle build` or `maizzle serve` and it has
+| the fastest build time, since most transformations are disabled.
 |
 */
 
@@ -24,16 +24,19 @@ module.exports = {
   events: {
     async beforeCreate(config) {
       try {
-        // fetch data from endpoint
+        // Fetch data from endpoint
         const { data } = await axios.get(config.build.endpoint)
-        // create the posts object
+
+        // Create the posts object
         config.posts = {}
-        // create a collection of 'all' posts that we fetched
+
+        // Create a collection of 'all' posts that we fetched
         config.posts.all = data
-        // console.log(config.posts.all[0])
-        // create an object with the last two posts
-        config.posts.lasttwo = data.slice(-2)
-        // featured image
+
+        // Create an object with the last two posts
+        config.posts.lastTwo = data.slice(-2)
+
+        // Set featured image
         config.posts.featured = {}
         config.posts.featured.image = data[0]._embedded['wp:featuredmedia'][0]['source_url'] || 'https://via.placeholder.com/600x400'
       } catch (error) {
