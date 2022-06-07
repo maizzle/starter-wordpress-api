@@ -1,4 +1,16 @@
-# WordPress Posts to Email Newsletter
+<div align="center">
+  <p>
+    <a href="https://maizzle.com/#gh-light-mode-only" target="_blank">
+      <img src="./.github/logo-light.svg" alt="Maizzle" width="200">
+    </a>
+    <a href="https://maizzle.com/#gh-dark-mode-only" target="_blank">
+      <img src="./.github/logo-dark.svg" alt="Maizzle" width="200">
+    </a>
+  </p>
+  <p>WordPress Posts to Email Newsletter</p>
+</div>
+
+## About
 
 This is the repository for the ["How to use the WordPress API to create a newsletter from your posts"](https://maizzle.com/guides/wordpress-api) Maizzle guide.
 
