@@ -20,14 +20,14 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
               </tr>
               <tr>
                 <td class="bg-top bg-no-repeat bg-cover rounded text-left" style="background-image: url('{{ featured.image }}');">
-                  <div class="rounded" style="background-color: rgba(0,0,0,0.5)">
+                  <div class="rounded bg-[rgba(0,0,0,0.5)]">
                     <component
                       src="src/components/v-image.html"
                       width="600px"
                       height="400px"
                       image="{{ featured.image }}"
                     >
-                      <div class="leading-8">&zwnj;</div>
+                      <div class="leading-8" role="separator">&zwnj;</div>
                       <table class="w-full">
                         <tr>
                           <td class="w-12 sm:w-4"></td>
@@ -40,24 +40,29 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                             <div class="m-0 text-white text-lg leading-6">
                               {{{ page.truncate(all[0].excerpt.rendered, 28) }}}
                             </div>
-                            <div class="leading-8">&zwnj;</div>
-                            <table>
-                              <tr>
-                                <th class="bg-indigo-800 hover:bg-indigo-700 rounded" style="mso-padding-alt: 16px 24px;">
-                                  <a href="{{ all[0].link }}" class="block font-semibold text-white text-base leading-full py-4 px-6 [text-decoration:none]">Read more &rarr;</a>
-                                </th>
-                              </tr>
-                            </table>
+                            <div class="leading-8" role="separator">&zwnj;</div>
+                            <a
+                              href="https://example.com"
+                              class="inline-block py-4 px-6 rounded text-base leading-full font-semibold text-center [text-decoration:none] text-white bg-indigo-700 hover:bg-indigo-600"
+                            >
+                              <outlook>
+                                <i class="tracking-6 -mso-font-width-full mso-text-raise-7.5">&#8202;</i>
+                              </outlook>
+                              <span class="mso-text-raise-4">Read more &rarr;</span>
+                              <outlook>
+                                <i class="tracking-6 -mso-font-width-full">&#8202;</i>
+                              </outlook>
+                            </a>
                           </td>
-                          <td class="w-1 sm:w-4"></td>
+                          <td class="w-12 sm:w-4"></td>
                         </tr>
                       </table>
-                      <div class="leading-8">&zwnj;</div>
+                      <div class="leading-8" role="separator">&zwnj;</div>
                     </component>
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr role="separator">
                 <td class="h-8"></td>
               </tr>
               <tr>
@@ -68,7 +73,9 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                         <table class="w-full">
                           <tr>
                             <td class="p-6 bg-white rounded">
-                              <p class="m-0 mb-1 text-sm text-gray-500">{{ page.formattedDate(all[1].date) }}</p>
+                              <p class="m-0 mb-1 text-sm text-gray-500">
+                                {{ page.formattedDate(all[1].date) }}
+                              </p>
                               <h2 class="m-0 mb-6 text-2xl leading-6">
                                 <a href="{{ all[1].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">
                                   {{{ (all[1].title.rendered) }}}
@@ -96,12 +103,18 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                         <table class="w-full">
                           <tr>
                             <td class="p-6">
-                              <p class="m-0 mb-1 text-sm text-gray-500">{{ page.formattedDate(all[2].date) }}</p>
+                              <p class="m-0 mb-1 text-sm text-gray-500">
+                                {{ page.formattedDate(all[2].date) }}
+                              </p>
                               <h2 class="m-0 mb-6 text-2xl leading-6">
                                 <a href="{{ all[2].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">{{{ all[2].title.rendered }}}</a>
                               </h2>
-                              <div class="m-0 mb-6 text-base text-gray-800">{{{ page.truncate(all[2].excerpt.rendered, 10) }}}</div>
-                              <a href="{{ all[2].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">Read more &rarr;</a>
+                              <div class="m-0 mb-6 text-base text-gray-800">
+                                {{{ page.truncate(all[2].excerpt.rendered, 10) }}}
+                              </div>
+                              <a href="{{ all[2].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">
+                                Read more &rarr;
+                              </a>
                             </td>
                           </tr>
                         </table>
@@ -111,7 +124,9 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                         <table class="w-full">
                           <tr>
                             <td class="p-6">
-                              <p class="m-0 mb-1 text-sm text-gray-500">{{ page.formattedDate(all[3].date) }}</p>
+                              <p class="m-0 mb-1 text-sm text-gray-500">
+                                {{ page.formattedDate(all[3].date) }}
+                              </p>
                               <h2 class="m-0 mb-6 text-2xl leading-6">
                                 <a href="{{ all[3].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">
                                   {{{ all[3].title.rendered }}}
@@ -131,7 +146,7 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                   </table>
                 </td>
               </tr>
-              <tr>
+              <tr role="separator">
                 <td class="h-16 sm:h-8"></td>
               </tr>
               <tr>
@@ -139,12 +154,12 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                   <h3 class="m-0 text-base font-semibold text-gray-500 uppercase">
                     From the archives
                   </h3>
-                  <div class="leading-6">&zwnj;</div>
+                  <div class="leading-6" role="separator">&zwnj;</div>
                   <table class="w-full">
                     <each loop="post in lastTwo">
                       <tr>
                         <td>
-                          <p class="text-xs text-gray-500 mb-0.5">
+                          <p class="m-0 mb-0.5 text-xs text-gray-500">
                             {{ page.formattedDate(post.date) }}
                           </p>
                           <h4 class="m-0 mb-1 text-xl font-semibold">
@@ -156,7 +171,7 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                             {{{ page.truncate(post.excerpt.rendered, 20) }}}
                           </div>
                           <if condition="!loop.last">
-                            <table class="w-full">
+                            <table class="w-full" role="separator">
                               <tr>
                                 <td class="py-6">
                                   <div class="bg-gray-300 h-px leading-px">&zwnj;</div>
@@ -170,7 +185,7 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                   </table>
                 </td>
               </tr>
-              <tr>
+              <tr role="separator">
                 <td class="h-16 sm:h-8"></td>
               </tr>
               <tr>
@@ -181,7 +196,7 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                   </p>
                 </td>
               </tr>
-              <tr>
+              <tr role="separator">
                 <td class="h-12 sm:h-8"></td>
               </tr>
             </table>
