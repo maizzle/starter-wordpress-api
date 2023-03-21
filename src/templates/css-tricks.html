@@ -4,8 +4,8 @@ title: "Latest posts on CSS-Tricks"
 preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
 ---
 
-<extends src="src/layouts/main.html">
-  <block name="template">
+<x-main>
+  <fill:template>
     <scope with="page.posts">
       <table class="w-full font-sans">
         <tr>
@@ -19,15 +19,17 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                 </td>
               </tr>
               <tr>
-                <td class="bg-top bg-no-repeat bg-cover rounded text-left" style="background-image: url('{{ featured.image }}');">
+                <td
+                  class="bg-top bg-no-repeat bg-cover rounded text-left"
+                  style="background-image: url('{{ featured.image }}');"
+                >
                   <div class="rounded bg-[rgba(0,0,0,0.5)]">
-                    <component
-                      src="src/components/v-image.html"
+                    <x-v-image
                       width="600px"
                       height="400px"
                       image="{{ featured.image }}"
                     >
-                      <div class="leading-8" role="separator">&zwnj;</div>
+                      <div class="leading-8" role="separator">&zwj;</div>
                       <table class="w-full">
                         <tr>
                           <td class="w-12 sm:w-4"></td>
@@ -37,10 +39,13 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                                 {{ all[0].title.rendered }}
                               </a>
                             </h1>
+
                             <div class="m-0 text-white text-lg leading-6">
                               {{{ page.truncate(all[0].excerpt.rendered, 28) }}}
                             </div>
-                            <div class="leading-8" role="separator">&zwnj;</div>
+
+                            <div class="leading-8" role="separator">&zwj;</div>
+
                             <a
                               href="https://example.com"
                               class="inline-block py-4 px-6 rounded text-base leading-full font-semibold text-center [text-decoration:none] text-white bg-indigo-700 hover:bg-indigo-600"
@@ -57,8 +62,8 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                           <td class="w-12 sm:w-4"></td>
                         </tr>
                       </table>
-                      <div class="leading-8" role="separator">&zwnj;</div>
-                    </component>
+                      <div class="leading-8" role="separator">&zwj;</div>
+                    </x-v-image>
                   </div>
                 </td>
               </tr>
@@ -76,14 +81,17 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                               <p class="m-0 mb-1 text-sm text-gray-500">
                                 {{ page.formattedDate(all[1].date) }}
                               </p>
+
                               <h2 class="m-0 mb-6 text-2xl leading-6">
                                 <a href="{{ all[1].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">
                                   {{{ (all[1].title.rendered) }}}
                                 </a>
                               </h2>
+
                               <div class="m-0 mb-6 text-base text-gray-800">
                                 {{{ page.truncate(all[1].excerpt.rendered, 30, '') }}}
                               </div>
+
                               <a href="{{ all[1].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">
                                 Read more &rarr;
                               </a>
@@ -106,12 +114,15 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                               <p class="m-0 mb-1 text-sm text-gray-500">
                                 {{ page.formattedDate(all[2].date) }}
                               </p>
+
                               <h2 class="m-0 mb-6 text-2xl leading-6">
                                 <a href="{{ all[2].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">{{{ all[2].title.rendered }}}</a>
                               </h2>
+
                               <div class="m-0 mb-6 text-base text-gray-800">
                                 {{{ page.truncate(all[2].excerpt.rendered, 10) }}}
                               </div>
+
                               <a href="{{ all[2].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">
                                 Read more &rarr;
                               </a>
@@ -127,14 +138,17 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                               <p class="m-0 mb-1 text-sm text-gray-500">
                                 {{ page.formattedDate(all[3].date) }}
                               </p>
+
                               <h2 class="m-0 mb-6 text-2xl leading-6">
                                 <a href="{{ all[3].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">
                                   {{{ all[3].title.rendered }}}
                                 </a>
                               </h2>
+
                               <div class="m-0 mb-6 text-base text-gray-800">
                                 {{{ page.truncate(all[3].excerpt.rendered, 10) }}}
                               </div>
+
                               <a href="{{ all[3].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">
                                 Read more &rarr;
                               </a>
@@ -154,7 +168,9 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                   <h3 class="m-0 text-base font-semibold text-gray-500 uppercase">
                     From the archives
                   </h3>
-                  <div class="leading-6" role="separator">&zwnj;</div>
+
+                  <div class="leading-6" role="separator">&zwj;</div>
+
                   <table class="w-full">
                     <each loop="post in lastTwo">
                       <tr>
@@ -162,19 +178,22 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                           <p class="m-0 mb-0.5 text-xs text-gray-500">
                             {{ page.formattedDate(post.date) }}
                           </p>
+
                           <h4 class="m-0 mb-1 text-xl font-semibold">
                             <a href="{{ post.link }}" class="text-blue-500 hover:text-blue-400 [text-decoration:none]">
                               {{ post.title.rendered }}
                             </a>
                           </h4>
+
                           <div class="m-0 text-gray-500">
                             {{{ page.truncate(post.excerpt.rendered, 20) }}}
                           </div>
+
                           <if condition="!loop.last">
                             <table class="w-full" role="separator">
                               <tr>
                                 <td class="py-6">
-                                  <div class="bg-gray-300 h-px leading-px">&zwnj;</div>
+                                  <div class="bg-gray-300 h-px leading-px">&zwj;</div>
                                 </td>
                               </tr>
                             </table>
@@ -204,5 +223,5 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
         </tr>
       </table>
     </scope>
-  </block>
-</extends>
+  </fill:template>
+</x-main>
