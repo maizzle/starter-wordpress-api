@@ -5,223 +5,221 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
 ---
 
 <x-main>
-  <fill:template>
-    <scope with="page.posts">
-      <table class="w-full font-sans">
-        <tr>
-          <td align="center" class="bg-gray-200 sm:px-4">
-            <table class="w-[600px] sm:w-full">
-              <tr>
-                <td class="p-12 sm:py-8 sm:px-6 text-center">
-                  <a href="https://css-tricks.com">
-                    <img src="https://css-tricks.com/apple-touch-icon.png" width="100" alt="CSS-Tricks">
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td
-                  class="bg-top bg-no-repeat bg-cover rounded text-left"
-                  style="background-image: url('{{ featured.image }}');"
-                >
-                  <div class="rounded bg-[rgba(0,0,0,0.5)]">
-                    <x-v-image
-                      width="600px"
-                      height="400px"
-                      image="{{ featured.image }}"
-                    >
-                      <div class="leading-8" role="separator">&zwj;</div>
-                      <table class="w-full">
-                        <tr>
-                          <td class="w-12 sm:w-4"></td>
-                          <td>
-                            <h1 class="m-0 mb-4 text-4xl leading-10">
-                              <a href="{{ all[0].link }}" class="[text-decoration:none] text-white">
-                                {{ all[0].title.rendered }}
-                              </a>
-                            </h1>
-
-                            <div class="m-0 text-white text-lg leading-6">
-                              {{{ page.truncate(all[0].excerpt.rendered, 28) }}}
-                            </div>
-
-                            <div class="leading-8" role="separator">&zwj;</div>
-
-                            <a
-                              href="https://example.com"
-                              class="inline-block py-4 px-6 rounded text-base leading-full font-semibold text-center [text-decoration:none] text-white bg-indigo-700 hover:bg-indigo-600"
-                            >
-                              <outlook>
-                                <i class="tracking-6 -mso-font-width-full mso-text-raise-7.5">&#8202;</i>
-                              </outlook>
-                              <span class="mso-text-raise-4">Read more &rarr;</span>
-                              <outlook>
-                                <i class="tracking-6 -mso-font-width-full">&#8202;</i>
-                              </outlook>
-                            </a>
-                          </td>
-                          <td class="w-12 sm:w-4"></td>
-                        </tr>
-                      </table>
-                      <div class="leading-8" role="separator">&zwj;</div>
-                    </x-v-image>
-                  </div>
-                </td>
-              </tr>
-              <tr role="separator">
-                <td class="h-8"></td>
-              </tr>
-              <tr>
-                <td class="w-full px-6 sm:px-0 text-left">
-                  <table class="w-full">
-                    <tr>
-                      <td class="w-full pb-8 sm:w-full sm:inline-block">
-                        <table class="w-full">
-                          <tr>
-                            <td class="p-6 bg-white rounded">
-                              <p class="m-0 mb-1 text-sm text-gray-500">
-                                {{ page.formattedDate(all[1].date) }}
-                              </p>
-
-                              <h2 class="m-0 mb-6 text-2xl leading-6">
-                                <a href="{{ all[1].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">
-                                  {{{ (all[1].title.rendered) }}}
-                                </a>
-                              </h2>
-
-                              <div class="m-0 mb-6 text-base text-gray-800">
-                                {{{ page.truncate(all[1].excerpt.rendered, 30, '') }}}
-                              </div>
-
-                              <a href="{{ all[1].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">
-                                Read more &rarr;
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td class="w-full px-6 sm:px-0 text-left">
-                  <table class="w-full">
-                    <tr>
-                      <td class="w-[260px] sm:w-full sm:block align-top bg-white rounded">
-                        <table class="w-full">
-                          <tr>
-                            <td class="p-6">
-                              <p class="m-0 mb-1 text-sm text-gray-500">
-                                {{ page.formattedDate(all[2].date) }}
-                              </p>
-
-                              <h2 class="m-0 mb-6 text-2xl leading-6">
-                                <a href="{{ all[2].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">{{{ all[2].title.rendered }}}</a>
-                              </h2>
-
-                              <div class="m-0 mb-6 text-base text-gray-800">
-                                {{{ page.truncate(all[2].excerpt.rendered, 10) }}}
-                              </div>
-
-                              <a href="{{ all[2].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">
-                                Read more &rarr;
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                      <td class="w-8 sm:block sm:w-full sm:h-8"></td>
-                      <td class="w-[260px] sm:w-full sm:block align-top bg-white rounded">
-                        <table class="w-full">
-                          <tr>
-                            <td class="p-6">
-                              <p class="m-0 mb-1 text-sm text-gray-500">
-                                {{ page.formattedDate(all[3].date) }}
-                              </p>
-
-                              <h2 class="m-0 mb-6 text-2xl leading-6">
-                                <a href="{{ all[3].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">
-                                  {{{ all[3].title.rendered }}}
-                                </a>
-                              </h2>
-
-                              <div class="m-0 mb-6 text-base text-gray-800">
-                                {{{ page.truncate(all[3].excerpt.rendered, 10) }}}
-                              </div>
-
-                              <a href="{{ all[3].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">
-                                Read more &rarr;
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr role="separator">
-                <td class="h-16 sm:h-8"></td>
-              </tr>
-              <tr>
-                <td class="px-12 sm:px-6 text-left">
-                  <h3 class="m-0 text-base font-semibold text-gray-500 uppercase">
-                    From the archives
-                  </h3>
-
-                  <div class="leading-6" role="separator">&zwj;</div>
-
-                  <table class="w-full">
-                    <each loop="post in lastTwo">
+  <scope with="page.posts">
+    <table class="w-full font-sans">
+      <tr>
+        <td align="center" class="bg-gray-200 sm:px-4">
+          <table class="w-[600px] sm:w-full">
+            <tr>
+              <td class="p-12 sm:py-8 sm:px-6 text-center">
+                <a href="https://css-tricks.com">
+                  <img src="https://css-tricks.com/apple-touch-icon.png" width="100" alt="CSS-Tricks">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="bg-top bg-no-repeat bg-cover rounded text-left"
+                style="background-image: url('{{ featured.image }}');"
+              >
+                <div class="rounded bg-[rgba(0,0,0,0.5)]">
+                  <x-v-image
+                    width="600px"
+                    height="400px"
+                    image="{{ featured.image }}"
+                  >
+                    <div class="leading-8" role="separator">&zwj;</div>
+                    <table class="w-full">
                       <tr>
+                        <td class="w-12 sm:w-4"></td>
                         <td>
-                          <p class="m-0 mb-0.5 text-xs text-gray-500">
-                            {{ page.formattedDate(post.date) }}
-                          </p>
-
-                          <h4 class="m-0 mb-1 text-xl font-semibold">
-                            <a href="{{ post.link }}" class="text-blue-500 hover:text-blue-400 [text-decoration:none]">
-                              {{ post.title.rendered }}
+                          <h1 class="m-0 mb-4 text-4xl leading-10">
+                            <a href="{{ all[0].link }}" class="[text-decoration:none] text-white">
+                              {{ all[0].title.rendered }}
                             </a>
-                          </h4>
+                          </h1>
 
-                          <div class="m-0 text-gray-500">
-                            {{{ page.truncate(post.excerpt.rendered, 20) }}}
+                          <div class="m-0 text-white text-lg leading-6">
+                            {{{ page.truncate(all[0].excerpt.rendered, 28) }}}
                           </div>
 
-                          <if condition="!loop.last">
-                            <table class="w-full" role="separator">
-                              <tr>
-                                <td class="py-6">
-                                  <div class="bg-gray-300 h-px leading-px">&zwj;</div>
-                                </td>
-                              </tr>
-                            </table>
-                          </if>
+                          <div class="leading-8" role="separator">&zwj;</div>
+
+                          <a
+                            href="https://example.com"
+                            class="inline-block py-4 px-6 rounded text-base leading-full font-semibold text-center [text-decoration:none] text-white bg-indigo-700 hover:bg-indigo-600"
+                          >
+                            <outlook>
+                              <i class="tracking-6 -mso-font-width-full mso-text-raise-7.5">&#8202;</i>
+                            </outlook>
+                            <span class="mso-text-raise-4">Read more &rarr;</span>
+                            <outlook>
+                              <i class="tracking-6 -mso-font-width-full">&#8202;</i>
+                            </outlook>
+                          </a>
                         </td>
+                        <td class="w-12 sm:w-4"></td>
                       </tr>
-                    </each>
-                  </table>
-                </td>
-              </tr>
-              <tr role="separator">
-                <td class="h-16 sm:h-8"></td>
-              </tr>
-              <tr>
-                <td class="px-12 sm:px-6 py-4 bg-gray-300 rounded text-left">
-                  <p class="m-0 text-sm text-gray-600">
-                    You are receiving this email because you signed up for Website Newsletter Weekly.
-                    You can <a href="https://example.com" class="text-blue-500 hover:text-blue-400 [text-decoration:none]">unsubscribe</a> at any time.
-                  </p>
-                </td>
-              </tr>
-              <tr role="separator">
-                <td class="h-12 sm:h-8"></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </scope>
-  </fill:template>
+                    </table>
+                    <div class="leading-8" role="separator">&zwj;</div>
+                  </x-v-image>
+                </div>
+              </td>
+            </tr>
+            <tr role="separator">
+              <td class="h-8"></td>
+            </tr>
+            <tr>
+              <td class="w-full px-6 sm:px-0 text-left">
+                <table class="w-full">
+                  <tr>
+                    <td class="w-full pb-8 sm:w-full sm:inline-block">
+                      <table class="w-full">
+                        <tr>
+                          <td class="p-6 bg-white rounded">
+                            <p class="m-0 mb-1 text-sm text-gray-500">
+                              {{ page.formattedDate(all[1].date) }}
+                            </p>
+
+                            <h2 class="m-0 mb-6 text-2xl leading-6">
+                              <a href="{{ all[1].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">
+                                {{{ (all[1].title.rendered) }}}
+                              </a>
+                            </h2>
+
+                            <div class="m-0 mb-6 text-base text-gray-800">
+                              {{{ page.truncate(all[1].excerpt.rendered, 30, '') }}}
+                            </div>
+
+                            <a href="{{ all[1].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">
+                              Read more &rarr;
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-full px-6 sm:px-0 text-left">
+                <table class="w-full">
+                  <tr>
+                    <td class="w-[260px] sm:w-full sm:block align-top bg-white rounded">
+                      <table class="w-full">
+                        <tr>
+                          <td class="p-6">
+                            <p class="m-0 mb-1 text-sm text-gray-500">
+                              {{ page.formattedDate(all[2].date) }}
+                            </p>
+
+                            <h2 class="m-0 mb-6 text-2xl leading-6">
+                              <a href="{{ all[2].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">{{{ all[2].title.rendered }}}</a>
+                            </h2>
+
+                            <div class="m-0 mb-6 text-base text-gray-800">
+                              {{{ page.truncate(all[2].excerpt.rendered, 10) }}}
+                            </div>
+
+                            <a href="{{ all[2].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">
+                              Read more &rarr;
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="w-8 sm:block sm:w-full sm:h-8"></td>
+                    <td class="w-[260px] sm:w-full sm:block align-top bg-white rounded">
+                      <table class="w-full">
+                        <tr>
+                          <td class="p-6">
+                            <p class="m-0 mb-1 text-sm text-gray-500">
+                              {{ page.formattedDate(all[3].date) }}
+                            </p>
+
+                            <h2 class="m-0 mb-6 text-2xl leading-6">
+                              <a href="{{ all[3].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">
+                                {{{ all[3].title.rendered }}}
+                              </a>
+                            </h2>
+
+                            <div class="m-0 mb-6 text-base text-gray-800">
+                              {{{ page.truncate(all[3].excerpt.rendered, 10) }}}
+                            </div>
+
+                            <a href="{{ all[3].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">
+                              Read more &rarr;
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr role="separator">
+              <td class="h-16 sm:h-8"></td>
+            </tr>
+            <tr>
+              <td class="px-12 sm:px-6 text-left">
+                <h3 class="m-0 text-base font-semibold text-gray-500 uppercase">
+                  From the archives
+                </h3>
+
+                <div class="leading-6" role="separator">&zwj;</div>
+
+                <table class="w-full">
+                  <each loop="post in lastTwo">
+                    <tr>
+                      <td>
+                        <p class="m-0 mb-0.5 text-xs text-gray-500">
+                          {{ page.formattedDate(post.date) }}
+                        </p>
+
+                        <h4 class="m-0 mb-1 text-xl font-semibold">
+                          <a href="{{ post.link }}" class="text-blue-500 hover:text-blue-400 [text-decoration:none]">
+                            {{ post.title.rendered }}
+                          </a>
+                        </h4>
+
+                        <div class="m-0 text-gray-500">
+                          {{{ page.truncate(post.excerpt.rendered, 20) }}}
+                        </div>
+
+                        <if condition="!loop.last">
+                          <table class="w-full" role="separator">
+                            <tr>
+                              <td class="py-6">
+                                <div class="bg-gray-300 h-px leading-px">&zwj;</div>
+                              </td>
+                            </tr>
+                          </table>
+                        </if>
+                      </td>
+                    </tr>
+                  </each>
+                </table>
+              </td>
+            </tr>
+            <tr role="separator">
+              <td class="h-16 sm:h-8"></td>
+            </tr>
+            <tr>
+              <td class="px-12 sm:px-6 py-4 bg-gray-300 rounded text-left">
+                <p class="m-0 text-sm text-gray-600">
+                  You are receiving this email because you signed up for Website Newsletter Weekly.
+                  You can <a href="https://example.com" class="text-blue-500 hover:text-blue-400 [text-decoration:none]">unsubscribe</a> at any time.
+                </p>
+              </td>
+            </tr>
+            <tr role="separator">
+              <td class="h-12 sm:h-8"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </scope>
 </x-main>
