@@ -20,49 +20,41 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
             <tr>
               <td
                 class="bg-top bg-no-repeat bg-cover rounded text-left"
-                style="background-image: url('{{ featured.image }}');"
+                style="background-image: url('{{{ featured.image }}}');"
               >
                 <div class="rounded bg-[rgba(0,0,0,0.5)]">
-                  <x-v-image
+                  <x-v-fill
                     width="600px"
-                    height="400px"
-                    image="{{ featured.image }}"
+                    image="{{{ featured.image }}}"
                   >
-                    <div class="leading-8" role="separator">&zwj;</div>
+                    <x-spacer height="32px" />
+
                     <table class="w-full">
                       <tr>
                         <td class="w-12 sm:w-4"></td>
                         <td>
                           <h1 class="m-0 mb-4 text-4xl leading-10">
-                            <a href="{{ all[0].link }}" class="[text-decoration:none] text-white">
+                            <a href="{{{ all[0].link }}}" class="no-underline text-white">
                               {{ all[0].title.rendered }}
                             </a>
                           </h1>
 
-                          <div class="m-0 text-white text-lg leading-6">
+                          <div class="m-0 text-white text-lg/6">
                             {{{ page.truncate(all[0].excerpt.rendered, 28) }}}
                           </div>
 
-                          <div class="leading-8" role="separator">&zwj;</div>
+                          <x-spacer height="32px" />
 
-                          <a
-                            href="https://example.com"
-                            class="inline-block py-4 px-6 rounded text-base leading-full font-semibold text-center [text-decoration:none] text-white bg-indigo-700 hover:bg-indigo-600"
-                          >
-                            <outlook>
-                              <i class="tracking-6 -mso-font-width-full mso-text-raise-7.5">&#8202;</i>
-                            </outlook>
-                            <span class="mso-text-raise-4">Read more &rarr;</span>
-                            <outlook>
-                              <i class="tracking-6 -mso-font-width-full">&#8202;</i>
-                            </outlook>
-                          </a>
+                          <x-button href="{{{ all[0].link }}}">
+                            Read more &rarr;
+                          </x-button>
                         </td>
                         <td class="w-12 sm:w-4"></td>
                       </tr>
                     </table>
-                    <div class="leading-8" role="separator">&zwj;</div>
-                  </x-v-image>
+
+                    <x-spacer height="32px" />
+                  </x-v-fill>
                 </div>
               </td>
             </tr>
@@ -81,8 +73,8 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                               {{ page.formattedDate(all[1].date) }}
                             </p>
 
-                            <h2 class="m-0 mb-6 text-2xl leading-6">
-                              <a href="{{ all[1].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">
+                            <h2 class="m-0 mb-6 text-2xl/6">
+                              <a href="{{{ all[1].link }}}" class="text-black hover:text-gray-700 no-underline">
                                 {{{ (all[1].title.rendered) }}}
                               </a>
                             </h2>
@@ -91,7 +83,7 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                               {{{ page.truncate(all[1].excerpt.rendered, 30, '') }}}
                             </div>
 
-                            <a href="{{ all[1].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">
+                            <a href="{{{ all[1].link }}}" class="text-base text-blue-500 hover:text-blue-400 no-underline">
                               Read more &rarr;
                             </a>
                           </td>
@@ -114,15 +106,17 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                               {{ page.formattedDate(all[2].date) }}
                             </p>
 
-                            <h2 class="m-0 mb-6 text-2xl leading-6">
-                              <a href="{{ all[2].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">{{{ all[2].title.rendered }}}</a>
+                            <h2 class="m-0 mb-6 text-2xl/6">
+                              <a href="{{{ all[2].link }}}" class="text-black hover:text-gray-700 no-underline">
+                                {{{ all[2].title.rendered }}}
+                              </a>
                             </h2>
 
                             <div class="m-0 mb-6 text-base text-gray-800">
                               {{{ page.truncate(all[2].excerpt.rendered, 10) }}}
                             </div>
 
-                            <a href="{{ all[2].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">
+                            <a href="{{{ all[2].link }}}" class="text-base text-blue-500 hover:text-blue-400 no-underline">
                               Read more &rarr;
                             </a>
                           </td>
@@ -138,8 +132,8 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                               {{ page.formattedDate(all[3].date) }}
                             </p>
 
-                            <h2 class="m-0 mb-6 text-2xl leading-6">
-                              <a href="{{ all[3].link }}" class="text-black hover:text-gray-700 [text-decoration:none]">
+                            <h2 class="m-0 mb-6 text-2xl/6">
+                              <a href="{{{ all[3].link }}}" class="text-black hover:text-gray-700 no-underline">
                                 {{{ all[3].title.rendered }}}
                               </a>
                             </h2>
@@ -148,7 +142,7 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                               {{{ page.truncate(all[3].excerpt.rendered, 10) }}}
                             </div>
 
-                            <a href="{{ all[3].link }}" class="text-base text-blue-500 hover:text-blue-400 [text-decoration:none]">
+                            <a href="{{{ all[3].link }}}" class="text-base text-blue-500 hover:text-blue-400 no-underline">
                               Read more &rarr;
                             </a>
                           </td>
@@ -168,7 +162,7 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                   From the archives
                 </h3>
 
-                <div class="leading-6" role="separator">&zwj;</div>
+                <x-spacer height="24px" />
 
                 <table class="w-full">
                   <each loop="post in lastTwo">
@@ -179,7 +173,7 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
                         </p>
 
                         <h4 class="m-0 mb-1 text-xl font-semibold">
-                          <a href="{{ post.link }}" class="text-blue-500 hover:text-blue-400 [text-decoration:none]">
+                          <a href="{{{ post.link }}}" class="text-blue-500 hover:text-blue-400 no-underline">
                             {{ post.title.rendered }}
                           </a>
                         </h4>
@@ -210,7 +204,7 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
               <td class="px-12 sm:px-6 py-4 bg-gray-300 rounded text-left">
                 <p class="m-0 text-sm text-gray-600">
                   You are receiving this email because you signed up for Website Newsletter Weekly.
-                  You can <a href="https://example.com" class="text-blue-500 hover:text-blue-400 [text-decoration:none]">unsubscribe</a> at any time.
+                  You can <a href="@{{ unsubscribe_url }}" class="text-blue-500 hover:text-blue-400 no-underline">unsubscribe</a> at any time.
                 </p>
               </td>
             </tr>
